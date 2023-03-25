@@ -74,7 +74,6 @@ i:HOVER {
 }
 .edit{
 	background-color: #1e90ff;
-
 }
 .delete{
 	background-color: #ff4757;
