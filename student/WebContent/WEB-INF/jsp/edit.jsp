@@ -68,8 +68,12 @@ button{
 }
 .input-group .error{
 	color: red;
+	text-align: center;
 }
-
+.input-group .success{
+	color: green;
+	text-align: center;
+}
 </style>
 
 <body>
@@ -122,6 +126,7 @@ button{
 	
 	</form:form>
 	</div>
-	<span class="error">${msg}</span>
+	<span class="error">${errorMsg}</span>
+	<span class="success">${successMsg}</span>
 </body>
 <jsp:include page="footer.jsp"></jsp:include>

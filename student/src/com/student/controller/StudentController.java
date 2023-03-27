@@ -44,21 +44,21 @@ public class StudentController {
 		}
 		
 		if(!(studentBo.getPassword().equals(studentBo.getConfirmPassword()))){
-			model.addAttribute("msg", "password doesn't match");
+			model.addAttribute("errorMsg", "password doesn't match");
 			return "signIn";
 		}
 		if(studentService.isEmailExists(studentBo.getEmail())){
-			model.addAttribute("msg", "email already exists");
+			model.addAttribute("errorMsg", "email already exists");
 			return "signIn";
 		}
 		int id=studentService.signIn(studentBo);
 		if(id>0){
-			model.addAttribute("msg", "student data save successfully");
+			model.addAttribute("successMsg", "student data save successfully");
 			model.addAttribute("loginBo", new LoginBo());
 			return "login";
 		}
 		else{
-			model.addAttribute("msg", "student data doesn't save");
+			model.addAttribute("errorMsg", "student data doesn't save");
 		}
 		return "signIn";
 		
@@ -91,16 +91,16 @@ public class StudentController {
 			return "edit"; 
 		}
 		if(!(studentBo.getPassword().equals(studentBo.getConfirmPassword()))){
-			model.addAttribute("msg", "password doesn't match");
+			model.addAttribute("errorMsg", "password doesn't match");
 			return "edit";
 		}
 		
 		int id=studentService.Update(studentBo);
 		if(id>0){
-			model.addAttribute("msg", "student record update successfully");
+			model.addAttribute("successMsg", "student record update successfully");
 		}
 		else{
-			model.addAttribute("msg", "student record doesn't update");
+			model.addAttribute("errorMsg", "student record doesn't update");
 		}
 		
 		return "edit";
@@ -139,7 +139,7 @@ public class StudentController {
 			return "redirect:/view";
 		}
 		else{
-			model.addAttribute("msg", "invalid login");
+			model.addAttribute("errorMsg", "invalid login");
 		}
 		return "login";
 		
@@ -170,7 +170,7 @@ public class StudentController {
 			return "view";
 		}
 		else {
-			model.addAttribute("msg", "record not found... ");
+			model.addAttribute("errorMsg", "record not found... ");
 			return "view";
 		}
 		
@@ -185,17 +185,17 @@ public class StudentController {
 	@RequestMapping("/forget")
 	public String forget(@ModelAttribute("studentBo")StudentBo studentBo,Model model){
 		if(!(studentBo.getPassword().equals(studentBo.getConfirmPassword()))){
-			model.addAttribute("msg", "password doesn't match");
+			model.addAttribute("errorMsg", "password doesn't match");
 			return "forget";
 		}
 		if(!(studentService.isEmailExists(studentBo.getEmail()))){
-			model.addAttribute("msg", "your not register");
+			model.addAttribute("errorMsg", "your not register");
 			return "forget";
 		}
 		int id=studentService.forget(studentBo);
 		if(0<id){
 			model.addAttribute("loginBo", new LoginBo());
-			model.addAttribute("msg", "Password changed");
+			model.addAttribute("successMsg", "Password changed");
 		}
 		return "login";
 		

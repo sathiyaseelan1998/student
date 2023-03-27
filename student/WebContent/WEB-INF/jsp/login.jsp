@@ -75,11 +75,12 @@ button{
 	margin-bottom: 10px;
 }
  .error{
- 	display:block;
 	color: red;
 	text-align: center;
-	width: 100%;
-	margin-top: 20px;
+}
+ .success{
+	color: green;
+	text-align: center;
 }
 .link{
 	color: black;
@@ -118,8 +119,8 @@ color: blue;
 	
 	</form:form>
 	</div>
-	<span class="error" style="text-align: center;">${msg}</span>
-	
+<span class="error">${errorMsg}</span>
+	<span class="success">${successMsg}</span>	
 	</div>
 </body>
 <jsp:include page="footer.jsp"></jsp:include>
