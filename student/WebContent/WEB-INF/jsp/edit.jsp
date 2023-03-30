@@ -74,6 +74,9 @@ button{
 	color: green;
 	text-align: center;
 }
+.input-group .error{
+	color: red;
+}
 </style>
 
 <body>
