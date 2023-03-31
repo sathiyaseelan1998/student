@@ -44,7 +44,7 @@ tr:nth-child(even){
 	
 }
 tr:hover {
-	color: lime;
+	color: blue;
 }
 tr:HOVER:nth-child(odd){
 	color: teal;
