@@ -46,9 +46,7 @@ tr:nth-child(even){
 tr:hover {
 	color: blue;
 }
-tr:HOVER:nth-child(odd){
-	color: teal;
-}
+
 .cap{
 
 text-transform: capitalize;
