@@ -124,14 +124,9 @@ i:HOVER {
 <td>${l.password}</td>
 <td>${l.address}</td>
 <td><a href="edit?id=${l.id}" class="edit">Edit</a></td>
-<td><a href="delete?id=${l.id}" class="delete">Delete</i></a></td>
-			
+<td><a href="delete?id=${l.id}" class="delete">Delete</a></td>			
 </tr>
-
-
 </c:forEach>
-
-
 </table>
 </div>
 <jsp:include page="footer.jsp"></jsp:include>
