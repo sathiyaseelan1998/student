@@ -104,7 +104,6 @@ i:HOVER {
 <table>
 
 <tr>
-
 <th>ID</th>
 <th>NAME</th>
 <th>EMAIL</th>
@@ -112,8 +111,6 @@ i:HOVER {
 <th>ADDRESS</th>
 <th>EDIT</th>
 <th>DELETE</th>
-
-
 </tr>
 
 <c:forEach items="${list}" var="l">
