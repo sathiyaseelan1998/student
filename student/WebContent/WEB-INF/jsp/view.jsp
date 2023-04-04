@@ -20,7 +20,7 @@
 th{
 background-color: navy;
 color: white;
-text-align: left;
+text-align: center;
 border-color: black;
 }
 table ,th ,td{
