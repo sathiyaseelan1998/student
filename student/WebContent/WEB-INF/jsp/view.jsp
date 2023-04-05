@@ -35,7 +35,7 @@ width: 100%;
 
 }
 tr{
-transition:all 0.5s ease;
+transition:all 0.3s ease;
 
 }
 
