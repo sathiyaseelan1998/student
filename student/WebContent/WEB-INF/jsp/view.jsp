@@ -68,6 +68,7 @@ i:HOVER {
 	text-align:center;
 	background-color: gray;
 	border-radius: 3px;
+	cursor: pointer;
 	
 }
 .edit{
