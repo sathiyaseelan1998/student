@@ -76,7 +76,6 @@ i:HOVER {
 }
 .delete{
 	background-color: #ff4757;
-
 }
 .add{
 	width: 35px;
